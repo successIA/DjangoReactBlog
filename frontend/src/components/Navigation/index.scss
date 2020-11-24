@@ -1,0 +1,65 @@
+@import "../../globalStyles/scss/variables.scss";
+
+.nav {
+  background-color: $white;
+  min-height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $layout-space;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+  &__icon-btn {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+
+  &__icon-btn + &__icon-btn {
+    margin-left: 0.75rem;
+  }
+}
+
+.navbar-collapse {
+  background: $blue-gray;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: auto;
+    min-width: 200px;
+    right: $layout-space;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+  }
+
+  &__list-item--divider {
+    border-top: 0.2px solid $gray-dark;
+  }
+
+  &__text {
+    color: $white;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+  }
+}

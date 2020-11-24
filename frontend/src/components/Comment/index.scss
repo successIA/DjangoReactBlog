@@ -1,0 +1,37 @@
+@import "../../globalStyles/scss/variables.scss";
+
+.comment {
+  background: $white;
+  padding-top: $layout-space;
+  padding-bottom: $layout-space;
+
+  &__text {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $gray-dark;
+  }
+
+  &__footer-item + &__footer-item {
+    margin-left: 0.25rem;
+  }
+
+  &__favorite-icon svg {
+    vertical-align: bottom;
+    cursor: pointer;
+  }
+
+  &__favorite-icon--liked svg {
+    fill: $pink;
+  }
+
+  &__favorite-icon svg:hover {
+    fill: $pink;
+  }
+}

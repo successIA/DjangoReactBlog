@@ -1,0 +1,193 @@
+@import-normalize;
+
+@import "../../globalStyles/scss/variables.scss";
+@import "../../globalStyles/scss/mixins.scss";
+
+html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div,
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  min-height: 100%;
+  background: $white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-width: 100%;
+}
+
+.page {
+  margin-top: 1rem;
+  background: $white;
+
+  &--bg-gray {
+    background: $gray-extra-light;
+  }
+
+  @media (min-width: 768px) {
+    &--bg-white-md {
+      background: $white;
+    }
+  }
+}
+
+.container {
+  padding-left: $layout-space;
+  padding-right: $layout-space;
+  background: $white;
+
+  &__y-border-margin-1 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  &__y-border-margin-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__row {
+    padding-top: $layout-space;
+    padding-bottom: $layout-space;
+  }
+
+  @include box-large;
+}
+
+.card {
+  background: $white;
+
+  &__header {
+    padding: 0.75rem 1rem;
+    border-bottom: 0.75px solid $gray-extra-light;
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 1.3;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  &__body {
+    padding: 1rem;
+  }
+}
+
+.svg--circle svg {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  margin-right: 0.5625rem;
+}
+
+.avatar--small {
+  width: 3rem;
+  height: 3rem;
+}
+
+.avatar--large {
+  width: $large-avatar-length;
+  height: $large-avatar-length;
+}
+
+.bordered-circle {
+  border: 3px solid $gray-dark;
+  border-radius: 50%;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0.35rem 0.65rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: bold;
+  background: $gray-extra-light;
+  color: $gray-extra-dark;
+}
+
+.btn--small {
+  padding: 0.25rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn--primary {
+  background: $primary;
+  color: $white;
+}
+
+.btn--primary:hover {
+  background-color: darken($primary, 10%);
+}
+
+.btn--flat {
+  border: 0px solid transparent;
+  background: transparent;
+  padding: 0.1rem;
+  margin: 0;
+  display: inline-block;
+}
+
+.svg-img {
+  display: block;
+}
+
+.loader {
+  display: inline-block;
+  border: 2px solid darken($gray-extra-light, 20%);
+  border-top: 2px solid darken($gray-extra-light, 25%);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

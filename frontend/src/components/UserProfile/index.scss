@@ -1,0 +1,114 @@
+@import "../../globalStyles/scss/variables.scss";
+@import "../../globalStyles/scss/mixins.scss";
+
+.userprofile-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &__media {
+    position: relative;
+  }
+
+  &__edit-avatar-btn {
+    position: absolute;
+    top: calc(#{$large-avatar-length} - 2.5rem + 2.5rem / 16);
+    left: calc(#{$large-avatar-length} - 2.5rem + 2.5rem / 16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-color: $primary;
+    background: transparent;
+  }
+
+  &__username {
+    line-height: 1.1667;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+.userprofile-stat {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__box {
+    display: flex;
+  }
+
+  &__item {
+    width: 50%;
+  }
+
+  &__item:first-of-type {
+    display: inline-flex;
+    justify-content: flex-end;
+    border-right: 1px solid $gray-extra-light;
+  }
+
+  &__item:last-of-type {
+    display: inline-flex;
+    justify-content: flex-start;
+  }
+
+  &__item-inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    line-height: 1.15;
+    font-weight: bold;
+  }
+}
+
+.userprofile-post-info {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include box-large;
+
+  &__tab-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $gray-extra-light;
+    padding-left: $layout-space;
+    padding-right: $layout-space;
+  }
+
+  &__tab-item {
+    text-align: center;
+    flex: 1;
+  }
+
+  &__tab-item--active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: $primary;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+
+  &__tab-text {
+    display: inline-block;
+    font-weight: 600;
+    color: $gray-light;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  &__tab-text--active {
+    color: $primary;
+  }
+}

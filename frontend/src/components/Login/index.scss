@@ -1,0 +1,86 @@
+@import "../../globalStyles/scss/variables.scss";
+
+.login-form-wrapper {
+  background: $white;
+  padding: 1rem;
+  box-shadow: red;
+  //   border: 1px solid black;
+  //   border-radius: 4px;
+}
+
+// body {
+//   background-color: $gray-light;
+// }
+
+.login-form {
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+  }
+
+  &__non-field-errors-container {
+    background: #ffcdd2;
+    padding: 1rem;
+    border-radius: 4px;
+    color: #b71c1c;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  &__group + &__group {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__label {
+    display: block;
+    font-weight: 700;
+    color: $blue-gray;
+    opacity: 0.9;
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+
+  &__label-asterisk {
+    font-size: 1.3rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid $gray-light;
+    // outline: $primary solid 1px;
+    outline: none;
+  }
+
+  &__input:focus {
+    border: 1px $primary solid;
+  }
+
+  &__action-bar {
+    display: flex;
+    flex-flow: row-reverse;
+  }
+
+  &__btn-loader {
+    display: inline-block;
+    border: 2px solid $gray-light;
+    border-top: 2px solid $gray-extra-light;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin-left: 0.25rem;
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

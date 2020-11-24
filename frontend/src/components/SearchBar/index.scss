@@ -1,0 +1,112 @@
+@import "../../globalStyles/scss/variables.scss";
+
+.search-bar-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  background: $white;
+  z-index: 3;
+
+  @media (min-width: 768px) {
+    position: static;
+    width: 30vw;
+  }
+}
+
+.search-bar {
+  position: relative;
+
+  &__form {
+    position: relative;
+  }
+
+  &__form-input {
+    padding-left: $layout-space * 2.6;
+    padding-right: $layout-space * 2.6;
+    width: 100%;
+    height: 3rem;
+    border-width: 0;
+    outline: none;
+    font-family: "Raleway";
+
+    @media (min-width: 768px) {
+      padding-left: $layout-space * 2.3;
+      padding-right: $layout-space * 2.3;
+      height: 2.3rem;
+      border: 1px solid $gray-dark;
+      border-radius: 18px;
+    }
+  }
+
+  &__form-input::placeholder {
+    font-size: 0.875rem;
+    line-height: 1.143;
+    color: $gray-dark;
+  }
+
+  &__search-btn,
+  &__cancel-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  &__search-btn {
+    position: absolute;
+    top: calc(3rem / 2 - 28px / 2);
+    left: $layout-space / 2;
+
+    @media (min-width: 768px) {
+      top: calc(2.3rem / 2 - 28px / 2);
+    }
+  }
+
+  &__cancel-btn {
+    position: absolute;
+    top: calc(3rem / 2 - 28px / 2);
+    right: $layout-space / 2;
+
+    @media (min-width: 768px) {
+      top: calc(2.3rem / 2 - 28px / 2);
+      display: none;
+    }
+  }
+
+  &__suggest-dropdown {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+
+    background: $white;
+    border-top: 1px solid $gray-light;
+    // box-shadow: 0px 0.5px 6px rgba($color: #000000, $alpha: 0.5);
+
+    padding-top: $layout-space;
+    padding-bottom: $layout-space;
+
+    @media (min-width: 768px) {
+      top: 2.5rem;
+      border: 1px solid $gray-extra-light;
+      border-radius: 4px;
+    }
+  }
+
+  &__suggest-dropdown-row {
+    padding: $layout-space / 2 $layout-space;
+    display: block;
+  }
+
+  &__suggest-dropdown-row--bg-gray {
+    background: $gray-extra-light;
+  }
+
+  &__suggest-dropdown-row-text {
+    font-size: 0.875rem;
+    line-height: 1.143;
+    display: block;
+  }
+}

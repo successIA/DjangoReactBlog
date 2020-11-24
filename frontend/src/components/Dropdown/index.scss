@@ -1,0 +1,53 @@
+@import "../../globalStyles/scss/variables.scss";
+
+.dropdown {
+  // position: absolute;
+  width: 100%;
+  // bottom: 0;
+  // left: 0;
+  background: $white;
+  // z-index: 1;
+
+  @media (min-width: 768px) {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.075);
+    width: auto;
+    min-width: 200px;
+    border-radius: 4px;
+    border: 1px solid $gray-extra-light;
+  }
+
+  &__row {
+    cursor: pointer;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: $layout-space;
+    padding-right: $layout-space;
+
+    @media (min-width: 768px) {
+      padding-top: $layout-space / 1.5;
+      padding-bottom: $layout-space / 1.5;
+    }
+  }
+
+  &__row:hover {
+    background: $gray-hovered;
+  }
+
+  &__row--bg-gray {
+    background: $gray-hovered;
+  }
+
+  &__row-item + &__row-item {
+    margin-left: 0.35rem;
+  }
+
+  &__row-text {
+    font-weight: bold;
+    font-size: 1rem;
+    @media (min-width: 768px) {
+      font-weight: inherit;
+    }
+  }
+}

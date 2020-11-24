@@ -1,0 +1,3 @@
+[run]
+include = posts/*, accounts/*
+omit = *migrations*, *tests*

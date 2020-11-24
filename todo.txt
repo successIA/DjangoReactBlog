@@ -1,0 +1,108 @@
+REACT
+Use react-dropdown package for comment sorting, may be for search suggest dropdown
+Use react-dropdown/or custom one for comment more dropdown
+enable slide animation for comment form
+
+Post
+- user
+- title
+- body
+- created
+- modified
+
+Comment
+- user
+- body
+- created
+- modified
+
+User
+- username
+- email
+- password
+- gravatar
+
+
+Post
+Admin can create update and delete post
+
+Comment
+User can create update and delete comment
+
+User
+Login
+login with username/email and password
+
+Register
+register with username, email and password
+
+Email Confirmation
+Confirm accounts with confirmation link sent to email after registering
+
+
+Reset password
+Reset password with reset link sent to email
+
+UserProfile
+List of comments
+Liked comments
+Received Liked Comments
+Update avatar
+Change avatar
+Change password with current password
+
+
+HomePage
+Naviagtion
+Logo       UserProfile Links
+
+Main
+Recent Posts
+
+Post Title        
+date_posted 5 min read
+body truncated to 400 characters
+
+
+Post Detail
+Naviagtion
+Logo       UserProfile Links
+
+Post Title        
+date_posted 5 min read
+body truncated to 400 characters
+
+Replies
+gravatar username            date posted (edited) three dots (Edit, delete, update)
+Body
+10 likes                        like
+
+
+previous blog post title     next blog post title
+
+Related Posts
+
+
+
+http://localhost:3000 -> http:
+
+django_rest_framework
+django_rest_auth
+
+
+Post (CRUD)
+ user
+ title
+ slug
+ body
+ created
+ updated
+
+Comment (CRUD)
+ user
+ body
+
+CommentLike(CD)
+ user
+ created
+ 
